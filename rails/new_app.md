@@ -1,12 +1,18 @@
+## Table of contents
+
+- [Create new app](#create-new-app)
+- [Initialize Git](#initialize-git)
+- [Setup Pow](#setup-pow)
+
 ## Create new app
 
 ```shell
-#### If you want to use Postgres
+#### NOTE: change APPNAME
 # Note you will need to change config/database.yml's username to be the same as your OSX user account. (for example, mine is 'greg')
-rails new myapp -d postgresql
+rails new APPNAME -d postgresql
 
 # Move into the application directory
-cd myapp
+cd APPNAME
 
 # If you setup the database with a username/password, add the username/password to the config/database.yml file
 
@@ -51,4 +57,10 @@ Construct your xip.io domain by appending your application's name to your LAN IP
 
 ```
 http://myapp.10.0.1.43.xip.io/
+```
+
+## Initialize Git
+
+```shell
+git init && git add . && git commit -m 'Initialize Rails.'
 ```

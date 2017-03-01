@@ -4,6 +4,7 @@
 - [Install or update rbenv](#install-or-update-rbenv)
 - [Install Ruby](#install-ruby)
 - [Install Rails](#install-rails)
+- [Install or update PostgreSQL](#install-or-update-postgresql)
 - [Setup Pow](#setup-pow)
 
 ## Install or update Homebrew
@@ -44,6 +45,25 @@ rbenv install 2.4.0 && rbenv global 2.4.0 && ruby -v
 ```shell
 gem install rails -v 5.0.1 && rbenv rehash && rails -v
 ```
+
+## Install or update PostgreSQL
+
+```shell
+brew install postgresql
+```
+
+**OR**
+
+```shell
+brew upgrade postgresql
+```
+
+```shell
+# To have launchd start postgresql at login and load postgresql now:
+ln -sfv /usr/local/opt/postgresql/*plist ~/Library/LaunchAgents && launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+```
+
+By default the postgresql user is your current OS X username with no password. For example, my OS X user is named `greg` so I can login to postgresql with that username.
 
 ## Setup Pow
 

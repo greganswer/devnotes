@@ -5,6 +5,7 @@
 - [Install Ruby](#install-ruby)
 - [Install Rails](#install-rails)
 - [Install or update PostgreSQL](#install-or-update-postgresql)
+- [Create new app](#create-new-app)
 - [Setup Pow](#setup-pow)
 
 ## Install or update Homebrew
@@ -64,6 +65,24 @@ ln -sfv /usr/local/opt/postgresql/*plist ~/Library/LaunchAgents && launchctl loa
 ```
 
 By default the postgresql user is your current OS X username with no password. For example, my OS X user is named `greg` so I can login to postgresql with that username.
+
+## Create new app
+
+```shell
+#### If you want to use Postgres
+# Note you will need to change config/database.yml's username to be the same as your OSX user account. (for example, mine is 'greg')
+rails new myapp -d postgresql
+
+# Move into the application directory
+cd myapp
+
+# If you setup the database with a username/password, add the username/password to the config/database.yml file
+
+# Create the database
+rake db:create
+```
+
+If you received an error that said `Access denied for user 'root'@'localhost' (using password: NO)` then you need to update your config/database.yml file to match the database username and password.
 
 ## Setup Pow
 

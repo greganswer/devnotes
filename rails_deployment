@@ -1,0 +1,13 @@
+## Table of contents
+
+- [Setup Digital Ocean server](#setup-digital-ocean-server)
+
+
+## Setup Digital Ocean server
+
+1. Login to https://cloud.digitalocean.com/login 
+1. Select *Create a droplet* 
+1. Select *Ubuntu 16.04 LTS x64*
+1. Select *$10/month*
+1. Add your SSH keys
+1. Choose a hostname

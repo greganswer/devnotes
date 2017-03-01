@@ -3,6 +3,8 @@
 - [Setup Digital Ocean server](#setup-digital-ocean-server)
 - [Instal Ruby](#instal-ruby)
 - [Instal Nginx](#instal-nginx)
+  - [Edit Nginx config](#edit-nginx-config)
+  - [Edit Passenger config](#edit-passenger-config)
 - [Instal PostgreSQL](#instal-postgresql)
 - [Setup Capistrano](#setup-capistrano)
 - [Add Nginx host](#add-nginx-host)
@@ -53,7 +55,61 @@ rbenv install 2.4.0 && rbenv global 2.4.0 && gem install bundler
 
 ## Instal Nginx
 
+```shell
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7 && sudo apt-get install -y apt-transport-https ca-certificates
+
+# Add Passenger APT repository
+sudo sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger xenial main > /etc/apt/sources.list.d/passenger.list'
+sudo apt-get update
+
+# Install Passenger & Nginx
+sudo apt-get install -y nginx-extras passenger && sudo service nginx start
+```
+
+Open up the server's IP address in your browser to make sure that nginx is up and running.
+To restart or stop your server, use `sudo service nginx restart` or `sudo service nginx stop` respectively.
+
+### Edit Nginx config
+
+```shell
+sudo nano /etc/nginx/nginx.conf
+```
+
+Find and uncomment the lines:
+
+```shell
+##
+# Phusion Passenger
+##
+# Uncomment it if you installed ruby-passenger or ruby-passenger-enterprise
+##
+
+include /etc/nginx/passenger.conf;
+```
+
+### Edit Passenger config
+
+```shell
+sudo nano /etc/nginx/passenger.conf
+```
+
+Find and set the lines:
+
+```shell
+passenger_ruby /home/deploy/.rbenv/shims/ruby;
+```
+
+Restart the server:
+
+```shell
+sudo service nginx restart
+```
+
 ## Instal PostgreSQL
+
+```shell
+sudo apt-get install postgresql postgresql-contrib libpq-dev
+```
 
 ## Setup Capistrano
 

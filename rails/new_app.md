@@ -64,3 +64,7 @@ http://myapp.10.0.1.43.xip.io/
 ```shell
 git init && git add . && git commit -m 'Initialize Rails.'
 ```
+1. Setup Remote repository at https://github.com/new
+1. Enter project name
+1. Enter discription
+1. Select public or private

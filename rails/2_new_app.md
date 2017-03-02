@@ -2,9 +2,10 @@
 
 - [Create new app](#create-new-app)
 - [Setup Capistrano](#setup-capistrano)
-- [Initialize Git](#initialize-git)
 - [Protect secrets and database](#protect-secrets-and-database)
 - [Setup Pow](#setup-pow)
+  - [Accessing virtual hosts from other computers](#Accessing-virtual-hosts-from-other-computers)
+- [Initialize Git](#initialize-git)
 
 ## Create new app
 
@@ -73,6 +74,16 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bund
 server '127.0.0.1', user: 'deploy', roles: %w{app db web}
 ```
 
+## Protect secrets and database
+
+echo "config/database.yml\nconfig/secrets.yml" >> .gitignore
+git add .gitignore
+git mv config/secrets.yml config/secrets.yml.example
+git mv config/database.yml config/database.yml.example
+git commit -m "Only store example secrets and database configs"
+cp config/secrets.yml.example config/secrets.yml
+cp config/database.yml.example config/database.yml
+
 ## Setup Pow
 
 [Pow](http://pow.cx/) is a is a zero-config Rack server for Mac OS X. It allows you to directly map folders to a local URL. 
@@ -102,23 +113,13 @@ cd ~/Library/Application Support/Pow/Hosts
 rm link_name
 ```
 
-#### Accessing Virtual Hosts from Other Computers
+#### Accessing virtual hosts from other computers
 
 Construct your xip.io domain by appending your application's name to your LAN IP address followed by .xip.io. For example, if your development computer's LAN IP address is 10.0.1.43, you can visit myapp.dev from another computer on your local network using the URL: 
 
 ```
 http://myapp.10.0.1.43.xip.io/
 ```
-
-## Protect secrets and database
-
-echo "config/database.yml\nconfig/secrets.yml" >> .gitignore
-git add .gitignore
-git mv config/secrets.yml config/secrets.yml.example
-git mv config/database.yml config/database.yml.example
-git commit -m "Only store example secrets and database configs"
-cp config/secrets.yml.example config/secrets.yml
-cp config/database.yml.example config/database.yml
 
 ## Initialize Git
 

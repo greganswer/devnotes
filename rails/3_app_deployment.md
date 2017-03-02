@@ -60,6 +60,8 @@ server {
 
 ## Add secrets and database files
 
+In app directory on local machine run `cap production deploy`
+
 ```shell
 ##### NOTE: Change APPNAME
 
@@ -92,3 +94,5 @@ On local machine run `rake secret` and copy the output
 production:
   secret_key_base: YOUR_SECRET_KEY
 ```
+
+In app directory on local machine run `cap production deploy` again

@@ -41,7 +41,7 @@ end
 ```
 
 ```shell
-cap install STAGES=production,staging
+bundle && cap install STAGES=production,staging
 ```
 
 ```ruby
@@ -78,6 +78,7 @@ server 'IPADDRESS', user: 'deploy', roles: %w{app db web}
 
 ## Protect secrets and database
 
+```shell
 echo "config/database.yml\nconfig/secrets.yml" >> .gitignore
 git add .gitignore
 git mv config/secrets.yml config/secrets.yml.example
@@ -89,6 +90,7 @@ cp config/database.yml.example config/database.yml
 echo "config/database.yml\nconfig/secrets.yml" >> .gitignore
 cp config/secrets.yml config/secrets.yml.example
 cp config/database.yml config/database.yml.example
+```
 
 ## Setup Pow
 

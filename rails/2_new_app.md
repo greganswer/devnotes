@@ -70,10 +70,10 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bund
 
 ```ruby
 
-###### NOTE: Replace 127.0.0.1 with your server's IP address!
+###### NOTE: Replace IPADDRESS with your server's IP address!
 # config/deploy/production.rb
 # config/deploy/staging.rb
-server '127.0.0.1', user: 'deploy', roles: %w{app db web}
+server 'IPADDRESS', user: 'deploy', roles: %w{app db web}
 ```
 
 ## Protect secrets and database
@@ -85,6 +85,10 @@ git mv config/database.yml config/database.yml.example
 git commit -m "Only store example secrets and database configs"
 cp config/secrets.yml.example config/secrets.yml
 cp config/database.yml.example config/database.yml
+
+echo "config/database.yml\nconfig/secrets.yml" >> .gitignore
+cp config/secrets.yml config/secrets.yml.example
+cp config/database.yml config/database.yml.example
 
 ## Setup Pow
 

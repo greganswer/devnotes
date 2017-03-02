@@ -60,7 +60,7 @@ set :rbenv_ruby, '2.4.0'
 # config/deploy.rb
 
 set :application, "APPNAME"
-set :repo_url, "git@example.com:USERNAME/APPNAME.git"
+set :repo_url, "git@github.com:USERNAME/APPNAME.git"
 
 set :deploy_to, '/home/deploy/APPNAME'
 

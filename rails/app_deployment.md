@@ -2,6 +2,7 @@
 
 - [Setup PostgreSQL database](#setup-postgresql-database)
 - [Setup DNS](#setup-dns)
+- [Add Nginx host](#add-nginx-host)
 
 ## Setup PostgreSQL database
 
@@ -31,3 +32,27 @@ The domain registry communicates the nameserver changes with your Internet Servi
 1. In a terminal window `ping WEB_ADDRESS`
 
 For more info reference https://www.digitalocean.com/community/tutorials/how-to-set-up-a-host-name-with-digitalocean
+
+## Add Nginx host
+
+On server run `sudo nano /etc/nginx/sites-enabled/default` and add the following
+*NOTE: If this is the first time, empty the file first.
+
+```shell
+##### NOTE: Change DOMAIN_NAME and APPNAME
+server {
+        listen 80;
+        listen [::]:80 ipv6only=on;
+
+        server_name DOMAIN_NAME.com;
+        passenger_enabled on;
+        rails_env    production;
+        root         /home/deploy/APPNAME/current/public;
+
+        # redirect server error pages to the static page /50x.html
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+}
+```

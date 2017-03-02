@@ -6,9 +6,6 @@
   - [Edit Nginx config](#edit-nginx-config)
   - [Edit Passenger config](#edit-passenger-config)
 - [Instal PostgreSQL](#instal-postgresql)
-- [Setup Capistrano](#setup-capistrano)
-- [Add Nginx host](#add-nginx-host)
-- [Connect database](#connect-database)
 - [Restart site](#restart-site)
 
 ## Setup Digital Ocean server
@@ -110,12 +107,6 @@ sudo service nginx restart
 ```shell
 sudo apt-get install postgresql postgresql-contrib libpq-dev
 ```
-
-## Setup Capistrano
-
-## Add Nginx host
-
-## Connect database
 
 ## Restart site
 

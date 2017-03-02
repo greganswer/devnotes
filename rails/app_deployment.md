@@ -76,7 +76,7 @@ production:
   adapter: postgresql
   host: localhost
   port: 5432
-  username: postgres
+  username: deploy
   encoding: unicode
   database: <%= app_name + '_' + Rails.env %>
   pool:     5

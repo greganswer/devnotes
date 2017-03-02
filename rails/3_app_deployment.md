@@ -72,6 +72,7 @@ touch database.yml secrets.yml
 ```yml
 ##### NOTE: Change PASSWORD
 # nano database.yml
+<% app_name = Rails.application.class.parent.to_s.underscore %>
 
 production:
   password: PASSWORD

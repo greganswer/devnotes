@@ -56,13 +56,15 @@ set :rbenv_ruby, '2.4.0'
 ```
 
 ```ruby
-###### NOTE: change APPNAME and USERNAME
+###### NOTE: change greganswer if necessary
 # config/deploy.rb
 
-set :application, "APPNAME"
-set :repo_url, "git@github.com:USERNAME/APPNAME.git"
+<% app_name = Rails.application.class.parent.to_s.underscore %>
 
-set :deploy_to, '/home/deploy/APPNAME'
+set :application, app_name
+set :repo_url, "git@github.com:greganswer/#{app_name}.git"
+
+set :deploy_to, "/home/deploy/#{app_name}"
 
 append :linked_files, "config/database.yml", "config/secrets.yml"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"

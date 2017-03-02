@@ -62,21 +62,12 @@ http://myapp.10.0.1.43.xip.io/
 ## Initialize Git
 
 ```shell
-git init && git add . && git commit -m 'Initialize Repository'
+git init && git add -A && git commit -m 'Initialize Repository'
 ```
 
 1. Setup Remote repository at https://github.com/new
 1. Enter project name
 1. Enter discription
 1. Select public or private
-
-**Add git origin**
-
-```shell
-##### NOTE: Change USERNAME and PROJECTNAME accordingly
-git remote add origin git@github.com:USERNAME/PROJECTNAME.git && git remote show origin
-git push -u origin --all
-
-# NOTE: To change origin, run the command below
-git remote set-url origin git@github.com:USERNAME/PROJECTNAME.git
-```
+1. Click *Create repository*
+1. copy the code from *…or push an existing repository from the command line* and paste in the command line

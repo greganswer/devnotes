@@ -3,6 +3,7 @@
 - [Setup PostgreSQL database](#setup-postgresql-database)
 - [Setup DNS](#setup-dns)
 - [Add Nginx host](#add-nginx-host)
+- [Add secrets and database files](#add-secrets-and-database-files)
 
 ## Setup PostgreSQL database
 
@@ -55,4 +56,39 @@ server {
             root   html;
         }
 }
+```
+
+## Add secrets and database files
+
+```shell
+##### NOTE: Change APPNAME
+
+cd /home/deploy/APPNAME/shared/config
+touch database.yml secrets.yml
+```
+
+```yml
+##### NOTE: Change PASSWORD
+# nano database.yml
+
+production:
+  password: PASSWORD
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  username: postgres
+  encoding: unicode
+  database: <%= app_name + '_' + Rails.env %>
+  pool:     5
+  timeout:  5000
+```
+
+On local machine run `rake secret` and copy the output
+
+```shell
+##### NOTE: Change YOUR_SECRET_KEY
+# nano secrets.yml
+
+production:
+  secret_key_base: YOUR_SECRET_KEY
 ```

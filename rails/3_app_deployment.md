@@ -58,6 +58,8 @@ server {
 }
 ```
 
+Save the file then run `sudo nginx -t -c /etc/nginx/nginx.conf` to test for errors.
+
 ## Add secrets and database files
 
 In app directory on local machine run `cap production deploy`

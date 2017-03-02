@@ -3,6 +3,7 @@
 - [Create new app](#create-new-app)
 - [Setup Capistrano](#setup-capistrano)
 - [Initialize Git](#initialize-git)
+- [Protect secrets and database](#protect-secrets-and-database)
 - [Setup Pow](#setup-pow)
 
 ## Create new app
@@ -108,6 +109,16 @@ Construct your xip.io domain by appending your application's name to your LAN IP
 ```
 http://myapp.10.0.1.43.xip.io/
 ```
+
+## Protect secrets and database
+
+echo "config/database.yml\nconfig/secrets.yml" >> .gitignore
+git add .gitignore
+git mv config/secrets.yml config/secrets.yml.example
+git mv config/database.yml config/database.yml.example
+git commit -m "Only store example secrets and database configs"
+cp config/secrets.yml.example config/secrets.yml
+cp config/database.yml.example config/database.yml
 
 ## Initialize Git
 

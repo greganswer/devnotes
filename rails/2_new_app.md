@@ -9,6 +9,7 @@ Mac OS X 10.11 El Capitan](https://gorails.com/setup/osx/10.11-el-capitan)
   - [Accessing virtual hosts from other computers](#Accessing-virtual-hosts-from-other-computers)
 - [Initialize Git](#initialize-git)
 - [Initialize specific gems](#initialize-specific-gems)
+- [Additional notes](#additional-notes)
 
 ## Create new app
 
@@ -138,3 +139,8 @@ git add . && git commit -m 'Initialize Rails'
 ```shell
 rails generate cucumber:install && rails generate rspec:install
 ```
+
+## Additional notes
+
+- If in terminal and `rails c` fails, run `ln -s /usr/local/opt/readline/lib/libreadline.dylib /usr/local/opt/readline/lib/libreadline.6.dylib`
+`

@@ -39,6 +39,8 @@ Ubuntu 16.04](https://gorails.com/deploy/ubuntu/16.04)
 ###### NOTE: Do this on local computer (Mac) and change IPADDRESS
 brew install ssh-copy-id
 ssh-copy-id deploy@IPADDRESS
+
+# When prompted, enter your password
 ```
 
 To test the connection, open a new terminal window and run `ssh deploy@IPADDRESS`.

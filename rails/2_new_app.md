@@ -8,6 +8,7 @@ Mac OS X 10.11 El Capitan](https://gorails.com/setup/osx/10.11-el-capitan)
 - [Setup Pow](#setup-pow)
   - [Accessing virtual hosts from other computers](#Accessing-virtual-hosts-from-other-computers)
 - [Initialize Git](#initialize-git)
+- [Initialize specific gems](#initialize-specific-gems)
 
 ## Create new app
 
@@ -130,3 +131,10 @@ git add . && git commit -m 'Initialize Rails'
 1. Select public or private
 1. Click *Create repository*
 1. copy the code from *…or push an existing repository from the command line* and paste in the command line
+
+
+## Initialize specific gems
+
+```shell
+rails generate cucumber:install
+```

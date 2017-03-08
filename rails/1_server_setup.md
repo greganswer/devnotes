@@ -4,7 +4,10 @@ Ubuntu 16.04](https://gorails.com/deploy/ubuntu/16.04)
 ## Table of contents
 
 - [Setup Digital Ocean server](#setup-digital-ocean-server)
+- [Log in to server and add server user account](#log-in-to-server-and-add-server-user-account)
+- [Add SSH key](#add-ssh-key)
 - [Instal Ruby](#instal-ruby)
+- [Instal rbenv](#instal-rbenv)
 - [Instal Nginx](#instal-nginx)
   - [Edit Nginx config](#edit-nginx-config)
   - [Edit Passenger config](#edit-passenger-config)
@@ -19,12 +22,16 @@ Ubuntu 16.04](https://gorails.com/deploy/ubuntu/16.04)
 1. Select *$10/month*
 1. Choose a hostname
 
-## Add server user account
+## Log in to server and add server user account
 
-```shell
-# On server
-sudo adduser deploy && sudo adduser deploy sudo && su deploy
-```
+1. Check your email inbox for IP address and password
+1. In terminal, log into server by entering: `ssh root@IPADDRESS`
+1. Are you sure you want to continue connecting? `yes`
+1. Enter password twice
+1. Enter new password twice
+1. `sudo adduser deploy && sudo adduser deploy sudo && su deploy`
+1. Press enter 5 times
+1. `y`
 
 ## Add SSH key
 

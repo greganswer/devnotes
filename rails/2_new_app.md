@@ -5,7 +5,6 @@ Mac OS X 10.11 El Capitan](https://gorails.com/setup/osx/10.11-el-capitan)
 
 - [Create new app](#create-new-app)
 - [Setup Capistrano](#setup-capistrano)
-- [Protect secrets and database](#protect-secrets-and-database)
 - [Setup Pow](#setup-pow)
   - [Accessing virtual hosts from other computers](#Accessing-virtual-hosts-from-other-computers)
 - [Initialize Git](#initialize-git)
@@ -81,22 +80,6 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bund
 server 'IPADDRESS', user: 'deploy', roles: %w{app db web}
 ```
 
-## Protect secrets and database
-
-```shell
-echo "config/database.yml\nconfig/secrets.yml" >> .gitignore
-git add .gitignore
-git mv config/secrets.yml config/secrets.yml.example
-git mv config/database.yml config/database.yml.example
-git commit -m "Only store example secrets and database configs"
-cp config/secrets.yml.example config/secrets.yml
-cp config/database.yml.example config/database.yml
-
-echo "config/database.yml\nconfig/secrets.yml" >> .gitignore
-cp config/secrets.yml config/secrets.yml.example
-cp config/database.yml config/database.yml.example
-```
-
 ## Setup Pow
 
 [Pow](http://pow.cx/) is a is a zero-config Rack server for Mac OS X. It allows you to directly map folders to a local URL. 
@@ -137,7 +120,8 @@ http://myapp.10.0.1.43.xip.io/
 ## Initialize Git
 
 ```shell
-git init && git add -A && git commit -m 'Initialize Repository'
+git init && git .gitignore && commit -m 'Intialize Repository'
+git add . && git commit -m 'Initialize Rails'
 ```
 
 1. Setup Remote repository at https://github.com/new

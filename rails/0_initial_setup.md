@@ -9,6 +9,7 @@ Mac OS X 10.11 El Capitan](https://gorails.com/setup/osx/10.11-el-capitan)
 - [Install Rails](#install-rails)
 - [Install or update PostgreSQL](#install-or-update-postgresql)
 - [Setup Pow](#setup-pow)
+-[Install additional packages](#install-additional-packages)
 
 ## Install or update Homebrew
 
@@ -103,4 +104,10 @@ Construct your xip.io domain by appending your application's name to your LAN IP
 
 ```
 http://myapp.10.0.1.43.xip.io/
+```
+
+## Install additional packages
+
+```shell
+brew install terminal-notifier
 ```

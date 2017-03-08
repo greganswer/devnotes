@@ -1,3 +1,6 @@
+**Note:** This is the Dev machine section in [Setup Ruby On Rails on
+Mac OS X 10.11 El Capitan](https://gorails.com/setup/osx/10.11-el-capitan)
+
 ## Table of contents
 
 - [Install or update Homebrew](#install-or-update-homebrew)

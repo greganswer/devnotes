@@ -1,4 +1,4 @@
-**Note:** This is the condensed version of [Deploy Ruby On Rails on
+**Note:** This is the condensed version of the app deployment section in [Deploy Ruby On Rails on
 Ubuntu 16.04](https://gorails.com/deploy/ubuntu/16.04)
 
 ## Table of contents

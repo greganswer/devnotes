@@ -1,3 +1,6 @@
+**Note:** This is the App setup section in [Setup Ruby On Rails on
+Mac OS X 10.11 El Capitan](https://gorails.com/setup/osx/10.11-el-capitan)
+
 ## Table of contents
 
 - [Create new app](#create-new-app)

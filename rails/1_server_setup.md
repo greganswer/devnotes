@@ -1,3 +1,6 @@
+**Note:** This is the condensed version of the server setup section in [Deploy Ruby On Rails on
+Ubuntu 16.04](https://gorails.com/deploy/ubuntu/16.04)
+
 ## Table of contents
 
 - [Setup Digital Ocean server](#setup-digital-ocean-server)

@@ -136,5 +136,5 @@ git add . && git commit -m 'Initialize Rails'
 ## Initialize specific gems
 
 ```shell
-rails generate cucumber:install
+rails generate cucumber:install && rails generate rspec:install
 ```

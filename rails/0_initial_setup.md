@@ -69,6 +69,8 @@ ln -sfv /usr/local/opt/postgresql/*plist ~/Library/LaunchAgents && launchctl loa
 
 By default the postgresql user is your current OS X username with no password. For example, my OS X user is named `greg` so I can login to postgresql with that username.
 
+**Note:** If having trouble with PostgreSQL server, go to [Postgresapp](#http://postgresapp.com), download the app, and start the server
+
 ## Setup Pow
 
 [Pow](http://pow.cx/) is a is a zero-config Rack server for Mac OS X. It allows you to directly map folders to a local URL. 

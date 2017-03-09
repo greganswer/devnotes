@@ -63,7 +63,7 @@ set :rbenv_ruby, '2.4.0'
 ###### NOTE: change greganswer if necessary
 # config/deploy.rb
 
-<% app_name = Rails.application.class.parent.to_s.underscore %>
+app_name = Rails.application.class.parent.to_s.underscore
 
 set :application, app_name
 set :repo_url, "git@github.com:greganswer/#{app_name}.git"

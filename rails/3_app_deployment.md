@@ -65,7 +65,7 @@ Save the file then run `sudo nginx -t -c /etc/nginx/nginx.conf` to test for erro
 
 ## Add secrets and database files
 
-In app directory on local machine run `cap production deploy`
+In app directory on local machine run `bundle exec cap production deploy`
 
 ```shell
 ##### NOTE: Change APPNAME

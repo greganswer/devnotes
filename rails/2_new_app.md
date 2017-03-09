@@ -16,7 +16,7 @@ Mac OS X 10.11 El Capitan](https://gorails.com/setup/osx/10.11-el-capitan)
 ```shell
 #### NOTE: change APPNAME
 # Note you will need to change config/database.yml's username to be the same as your OSX user account. (for example, mine is 'greg')
-rails new APPNAME --database postgresql --skip-test
+rails new APPNAME --database postgresql --skip-test --skip-turbolinks
 
 # Move into the application directory
 cd APPNAME

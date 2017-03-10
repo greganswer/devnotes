@@ -86,7 +86,6 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bund
 
 ###### NOTE: Replace IPADDRESS with your server's IP address!
 # config/deploy/production.rb
-# config/deploy/staging.rb
 server 'IPADDRESS', user: 'deploy', roles: %w{app db web}
 ```
 

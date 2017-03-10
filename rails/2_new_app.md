@@ -68,10 +68,10 @@ Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
 ```
 
 ```ruby
-###### NOTE: change greganswer if necessary
+###### NOTE: Change APPNAME and change greganswer if necessary
 # config/deploy.rb
 
-app_name = Rails.application.class.parent.to_s.underscore
+app_name = 'APPNAME'
 
 set :application, app_name
 set :repo_url, "git@github.com:greganswer/#{app_name}.git"

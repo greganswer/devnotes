@@ -1,4 +1,4 @@
-## Naming convention
+## Simplified naming convention
 
 **Formula:** *noun -> verb or adjective*
 

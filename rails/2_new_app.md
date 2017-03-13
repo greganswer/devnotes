@@ -130,7 +130,7 @@ http://myapp.10.0.1.43.xip.io/
 ## Initialize Git
 
 ```shell
-git init && git .gitignore && commit -m 'Intialize Repository'
+git init && git add .gitignore && commit -m 'Intialize Repository'
 git add . && git commit -m 'Initialize Rails'
 ```
 

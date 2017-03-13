@@ -39,8 +39,10 @@ For more info reference https://www.digitalocean.com/community/tutorials/how-to-
 
 ## Add Nginx host
 
-On server run `sudo nano /etc/nginx/sites-enabled/default` and add the following
-*NOTE: If this is the first time, empty the file first.
+*NOTE: If this is the first time, run `sudo rm /etc/nginx/sites-enabled/default`. Also, change greganswer.com to your site name
+
+On server run `sudo nano /etc/nginx/sites-enabled/greganswer.com` and add the following
+
 
 ```shell
 ##### NOTE: Change DOMAIN_NAME and APPNAME

@@ -21,6 +21,7 @@ Ubuntu 16.04](https://gorails.com/deploy/ubuntu/16.04)
 1. Select *Ubuntu 16.04 LTS x64*
 1. Select *$10/month*
 1. Choose a hostname
+1. Add a staging A record to DNS
 
 ## Log in to server and add server user account
 

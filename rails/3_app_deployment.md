@@ -7,6 +7,7 @@ Ubuntu 16.04](https://gorails.com/deploy/ubuntu/16.04)
 - [Setup DNS](#setup-dns)
 - [Add Nginx host](#add-nginx-host)
 - [Add secrets and database files](#add-secrets-and-database-files)
+- [Each time after](#each-time-after)
 
 ## Setup PostgreSQL database
 
@@ -15,6 +16,7 @@ Ubuntu 16.04](https://gorails.com/deploy/ubuntu/16.04)
 ##### NOTE: The password you type in here will be the one to put in your my_app/current/config/database.yml
 sudo su - postgres 
 createuser --pwprompt deploy
+createdb -O deploy APPNAME_staging
 createdb -O deploy APPNAME_production
 exit
 ```
@@ -119,3 +121,7 @@ production:
 ```
 
 In app directory on local machine run `cap production deploy` again
+
+## Each time after
+
+Any time you want to deploy simply run `cap staging deploy` or `cap production deploy`

@@ -46,12 +46,27 @@ On server run `sudo nano /etc/nginx/sites-enabled/default` and add the following
 ##### NOTE: Change DOMAIN_NAME and APPNAME
 server {
         listen 80;
-        listen [::]:80 ipv6only=on;
+        listen [::]:80;
 
-        server_name DOMAIN_NAME.com;
+        server_name staging.greganswer.com;
+        passenger_enabled on;
+        rails_env    staging;
+        root         /home/deploy/staging.greganswer/current/public;
+
+        # redirect server error pages to the static page /50x.html
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+}
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name greganswer.com;
         passenger_enabled on;
         rails_env    production;
-        root         /home/deploy/APPNAME/current/public;
+        root         /home/deploy/greganswer/current/public;
 
         # redirect server error pages to the static page /50x.html
         error_page   500 502 503 504  /50x.html;

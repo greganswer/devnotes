@@ -47,7 +47,7 @@ rbenv install 2.4.0 && rbenv global 2.4.0 && ruby -v
 ## Install Rails
 
 ```shell
-gem install rails -v 5.0.1 && rbenv rehash && rails -v
+gem install rails -v 5.0.2 && rbenv rehash && rails -v
 ```
 
 ## Install or update PostgreSQL

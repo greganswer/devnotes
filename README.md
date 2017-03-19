@@ -10,3 +10,4 @@
 1. Slow and steady wins the race!
 1. http://words.steveklabnik.com/how-to-be-an-open-source-gardener
 1. https://blog.codinghorror.com/not-all-bugs-are-worth-fixing/
+1. https://www.forbes.com/sites/quora/2014/12/16/should-innovative-companies-really-move-fast-and-break-things/#189197116d1d

@@ -8,6 +8,7 @@ Ubuntu 16.04](https://gorails.com/deploy/ubuntu/16.04)
 - [Add Nginx host](#add-nginx-host)
 - [Add secrets and database files](#add-secrets-and-database-files)
 - [Each time after](#each-time-after)
+- [Reset the database](#reset-the-database)
 
 ## Setup PostgreSQL database
 
@@ -125,3 +126,14 @@ In app directory on local machine run `cap production deploy` again
 ## Each time after
 
 Any time you want to deploy simply run `cap staging deploy` or `cap production deploy`
+
+## Reset the database
+
+From time to time you may need to reset the staging server database, to include new seed data, etc. Make sure you're in the `~/staging.APPNAME/current` folder. *NOTE: Change APPNAME.*
+
+```shell
+##### NOTE: Change APPNAME
+rake db:environment:set RAILS_ENV=staging db:drop
+sudo -u postgres createdb -O deploy APPNAME_staging
+rake db:environment:set RAILS_ENV=staging db:migrate db:seed
+```

@@ -154,3 +154,5 @@ Run the following command on the server
 ```
 service nginx restart
 ```
+
+The assumption is that for some reason the server ran out of memory.

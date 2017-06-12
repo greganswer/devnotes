@@ -9,6 +9,7 @@ Ubuntu 16.04](https://gorails.com/deploy/ubuntu/16.04)
 - [Add secrets and database files](#add-secrets-and-database-files)
 - [Each time after](#each-time-after)
 - [Reset the database](#reset-the-database)
+- [Random error message during deploy](random-error-message-during-deploy)
 
 ## Setup PostgreSQL database
 
@@ -136,4 +137,20 @@ From time to time you may need to reset the staging server database, to include 
 rake db:environment:set RAILS_ENV=staging db:drop
 sudo -u postgres createdb -O deploy APPNAME_staging
 rake db:environment:set RAILS_ENV=staging db:migrate db:seed
+```
+
+## Random error message during deploy
+
+If you see the following message during deployment
+
+```
+rake aborted!
+ExecJS::RuntimeError:
+(execjs):1
+```
+
+Run the following command on the server
+
+```
+service nginx restart
 ```

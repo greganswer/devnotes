@@ -16,10 +16,10 @@ I've placed these courses in order based on the areas I feel need improvement. O
 1. [Javascript](#javascript)
 	1. [The complete javascript course](#the-complete-javascript-course)
 	1. [Javascript: understanding the weird parts](#javascript-understanding-the-weird-parts)
-  1. [The complete node.js developer course](#the-complete-nodejs-developer-course)
+        1. [The complete node.js developer course](#the-complete-nodejs-developer-course)
 	1. [Modern react with redux](#modern-react-with-redux)
 1. [Miscellaneous](#miscellaneous)
-  1. [Decoding ap computer science a](#decoding-ap-computer-science-a)
+  1. [Decoding ap computer science a](#decoding-ap-computer-science-a)  
   1. [Python for beginners with examples](#python-for-beginners-with-examples)
 
 ## Agile

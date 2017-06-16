@@ -2,7 +2,7 @@
 
 > This is the list of courses I plan to take on [Udemy's website](udemy.com).
 
-I've placed these courses in order based on the areas I feel need improvement. Once completed, I will give a brief synopsis of the course and what I learned. I will also liknk to any relevant resources including the finished project.
+I've placed these courses in order based on the areas I feel need improvement. Once completed, I will give a brief synopsis of the course and what I learned. I will also link to any relevant resources including the finished project.
 
 ## Table of contents
 
@@ -15,7 +15,7 @@ I've placed these courses in order based on the areas I feel need improvement. O
     1. [The web development bootcamp](#the-web-development-bootcamp)
 1. [Javascript](#javascript)
     1. [The complete javascript course](#the-complete-javascript-course)
-    1. [Javascript: understanding the weird parts](#javascript-understanding-the-weird-parts)
+    1. [JavaScript: understanding the weird parts](#javascript-understanding-the-weird-parts)
     1. [The complete node.js developer course](#the-complete-nodejs-developer-course)
     1. [Modern react with redux](#modern-react-with-redux)
 1. [Miscellaneous](#miscellaneous)
@@ -31,6 +31,27 @@ Here is a list of brief and free courses on agile methodologies
 ### [Learn the truth about agile versus waterfall](https://www.udemy.com/learn-the-truth-about-agile-versus-waterfall/)
 
 **Why I'm taking it:** I know Agile is better, but why is it better?
+
+**Date completed:** Jun 15, 2017
+
+**What I Learned:**
+
+- It turns out that Agile is not necessarily better. Just different
+- You don't need to use one or the other. They can be complementary
+- The problem is that both approaches are often misapplied
+- Waterfall can be inflexible and it does not include customer feedback
+- Agile is a way of thinking that is more flexible, has testing built in, and generally has a faster time-to-market
+- Scrum
+    + Is a form of agile
+    + **Empirical process -** both the process and the results are adjusted as needed based on observations (continuous improvement)
+    + **Product Owner -** focuses on what is done
+    + **Scrum Master -** focuses on how it is done
+    + **Development Team -** cross functional, self organizing, and responsible for the solution 
+    + The Product Backlog is continuously refined, prioritized, and clarified
+- A hybrid creates different levels of agility
+    - Start with a general idea
+    - Engage a small test group as you progress
+    - Work iteratively 
 
 ### [Basics of scrum, agile and project delivery](https://www.udemy.com/scrum-methodology/)
 
@@ -54,7 +75,7 @@ Here is a list of brief and free courses on agile methodologies
 
 ---
 
-## Javascript
+## JavasScript
 
 Here is where I'll be getting my hands dirty.
 

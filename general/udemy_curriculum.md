@@ -8,8 +8,6 @@ I've placed these courses in order based on the areas I feel need improvement. O
 
 1. [Agile](#agile)
     1. [Learn the truth about agile versus waterfall](#learn-the-truth-about-agile-versus-waterfall)
-    1. [Basics of scrum, agile and project delivery](#basics-of-scrum-agile-and-project-delivery)
-    1. [A complete course on scrum body of knowledge](#a-complete-course-on-scrum-body-of-knowledge)
 1. [General web development](#general-web-development)
     1. [Ux and web design master course](#ux-and-web-design-master-course)
     1. [The web development bootcamp](#the-web-development-bootcamp)
@@ -30,9 +28,9 @@ Here is a list of brief and free courses on agile methodologies
 
 ### [Learn the truth about agile versus waterfall](https://www.udemy.com/learn-the-truth-about-agile-versus-waterfall/)
 
-**Why I'm taking it:** I know Agile is better, but why is it better?
-
-**Date completed:** Jun 15, 2017
+**Why this course:** | I know Agile is better, but why is it better?
+--- | ---
+**Date completed:** | Jun 15, 2017
 
 **What I Learned:**
 
@@ -46,32 +44,26 @@ Here is a list of brief and free courses on agile methodologies
     + **Empirical process -** both the process and the results are adjusted as needed based on observations (continuous improvement)
     + **Product Owner -** focuses on what is done
     + **Scrum Master -** focuses on how it is done
-    + **Development Team -** cross functional, self organizing, and responsible for the solution 
+    + **Development Team -** cross functional, self organizing, and responsible for the solution
     + The Product Backlog is continuously refined, prioritized, and clarified
 - A hybrid creates different levels of agility
     - Start with a general idea
     - Engage a small test group as you progress
-    - Work iteratively 
-
-### [Basics of scrum, agile and project delivery](https://www.udemy.com/scrum-methodology/)
-
-**Why I'm taking it:** I want to make sure that I'm focused on priorities no matter what project I'm working on.
-
-### [A complete course on scrum body of knowledge](https://www.udemy.com/a-complete-course-on-scrum-body-of-knowledge-sbok-guide)
-
-**Why I'm taking it:** To go a bit deeper in Scrum
+    - Work iteratively
 
 ---
 
 ## General Web Development
 
-### [Ux and web design master course](https://www.udemy.com/the-complete-nodejs-developer-course-2)
+### [UX and web design master course](https://www.udemy.com/the-complete-nodejs-developer-course-2)
 
-**Why I'm taking it:** **This is the most important part about technology - the user experience**
+**Why this course:** | **This is the most important part about technology - the user experience**
+--- | ---
+**Date completed:** | IN PROGRESS
 
 ### [The web development bootcamp](https://www.udemy.com/the-web-developer-bootcamp)
 
-**Why I'm taking it:** Just a refresher on most of the things I know so far.
+**Why this course:** Just a refresher on most of the things I know so far.
 
 ---
 
@@ -81,19 +73,19 @@ Here is where I'll be getting my hands dirty.
 
 ### [The complete javascript course](https://www.udemy.com/the-complete-javascript-course)
 
-**Why I'm taking it:** The next few courses are going to be dependent on my understanding of this course.
+**Why this course:** The next few courses are going to be dependent on my understanding of this course.
 
 ### [Javascript: understanding the weird parts](https://www.udemy.com/understand-javascript)
 
-**Why I'm taking it:** JavaScript can be really weird. I seek to understand it.
+**Why this course:** JavaScript can be really weird. I seek to understand it.
 
 ### [The complete Node.js developer course](https://www.udemy.com/the-complete-nodejs-developer-course-2)
 
-**Why I'm taking it:** Because it allows me to use a single programming language, rather than rely on a different language for writing server side scripts.
+**Why this course:** Because it allows me to use a single programming language, rather than rely on a different language for writing server side scripts.
 
 ### [Modern react with redux](https://www.udemy.com/react-redux)
 
-**Why I'm taking it:** Because React is a fast, simple, scalable, in-demand open-source JavaScript library
+**Why this course:** Because React is a fast, simple, scalable, in-demand open-source JavaScript library
 
 ---
 
@@ -101,8 +93,8 @@ Here is where I'll be getting my hands dirty.
 
 ### [Decoding AP computer science a](https://www.udemy.com/decoding-ap-computer-science-a)
 
-**Why I'm taking it:** To brush up on my Computer Science Knowledge that I may have neglected in high school.
+**Why this course:** To brush up on my Computer Science Knowledge that I may have neglected in high school.
 
 ### [Python for beginners with examples](https://www.udemy.com/ardit-sulce-python-for-beginners)
 
-**Why I'm taking it:** A few jobs descriptions had "Knowledge of Python" and I want to get a brief overview of Python.
+**Why this course:** A few jobs descriptions had "Knowledge of Python" and I want to get a brief overview of Python.

@@ -24,3 +24,13 @@ console.log(string.indexOf("nope"))
 #### Higher order functions
 
 Take a function as an argument or return another function.
+
+#### Common array functions
+
+- `forEach(eachElementName, index = null)` - For loop on array
+- `splice(index, numberOfElements)` - Removes `numberOfElements` starting from `index`
+- `indexOf(element)`- Find the index of the element. Returns `-1` if not in array
+- `push(element)`- Add an element to the end
+- `pop`- Remove and element from the end
+- `shift`- Remove an element from the beginning
+- `unshift(element)`- Add an element to the beginging

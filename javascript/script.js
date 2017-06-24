@@ -1,27 +1,41 @@
-function isEven(number) {
-  return number % 2 === 0;
-}
+let input = "";
+let list = [];
 
-// function factorial(number) {
-//   if (number <= 1) {
-//     return 1;
-//   }
-//   var total = number;
-//   while (number > 1) {
-//     number--;
-//     total *= number
-//   }
-//   return total;
-// }
 
-function factorial(number) {
-  var total = 1;
-  for (var i = 2; i < number; i++) {
-    total *= i;
+while (input !== "quit") {
+  input = prompt("What would you like to do?");
+
+  if (input === "list") {
+    listItems();
+  } else if (input === "new") {
+    addToDo();
+  } else if (input === "delete") {
+    deleteToDo();
   }
-  return total;
 }
 
-function kebabToSnake(string) {
-  return string.replace(/-/g, "_");
+console.log("YOU QUIT THE APP");
+
+
+
+function addToDo() {
+  let item = prompt("Enter your item");
+  list.push(item)
+  console.log('Added "' + item + '" to Todo list');
+}
+
+function deleteToDo() {
+  let item = prompt("Delete which index?");
+  list.splice(item, 1)
+  console.log('Deleted "' + item + '" from to Todo list');
+}
+
+function listItems() {
+  let output = "**********\n";
+  list.forEach(function(item, index) {
+    output += index + ": " + item + "\n";
+  });
+
+  output += "**********";
+  console.log(output);
 }

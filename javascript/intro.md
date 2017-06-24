@@ -34,3 +34,28 @@ Take a function as an argument or return another function.
 - `pop`- Remove and element from the end
 - `shift`- Remove an element from the beginning
 - `unshift(element)`- Add an element to the beginging
+
+#### document.querySelector()
+
+```javascript
+let tag = document.querySelector("li")
+let tag = document.querySelector("#comments")
+let tag = document.querySelector(".comment") // Returns only one element
+let tag = document.querySelectorAll(".comment") // Returns all elements
+```
+
+#### Select element text
+
+```javascript
+document.querySelector("p").textContent // Just the text
+document.querySelector("p").innerHTHML // Text with HTML markup
+```
+
+#### Event listner
+
+```javascript
+let p = document.querySelector("p")
+p.addEventListner("click", function () {
+  console.log("p was clicked");
+});
+```

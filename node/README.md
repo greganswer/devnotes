@@ -24,6 +24,10 @@ touch app.js
 # Or copy an app.js template file and package.json
 # Then run `npm install`
 npm install --save express ejs body-parser
+
+# Watch for changes to handlebars files
+# The -e flag tells nodemon which extention files to watch
+nodemon server.js -e js,hbs
 ```
 
 #### Send data from one file to another
@@ -84,4 +88,12 @@ repl
 
 ```javascript
 JSON.stringify(body, undefined, 2)
+```
+
+####
+
+`app.use()` statements are run in chronological
+
+```javascript
+app.use((req, res, next)
 ```

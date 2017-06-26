@@ -1,0 +1,21 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "This is an Express demo for node.JS",
+  "main": "app.js",
+  "repository": "https://github.com/greganswer/devnotes/tree/master/node/express",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "hbs": "^4.0.1",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

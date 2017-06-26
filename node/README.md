@@ -44,3 +44,38 @@ fs.appendFileSync('greetings.txt', `Hello ${user.username}! You are ${notes.age}
 ```javascript
 process.argv
 ```
+
+#### App debugging
+
+Add this after the code you wish to debug
+
+```javascript
+debugger;
+```
+
+to debug from Google Chrome
+
+```bash
+nodemon --inspect-brk APP_NAME
+```
+
+Then in Chrome enter `chrome://inspect` in a new tab and click `Open dedicated DevTools for Node`
+
+To debug from the command line
+
+```bash
+nodemon inspect APP_NAME
+
+# list the 10 lines above and below the place we are paused
+list(10)
+
+# Go to the next statement
+n
+
+# Continue to run your program untill the next `debugger` statement or the program finishes
+c
+
+# Enter REPL (Read Evaluate Print Loop)
+repl
+
+```

@@ -79,3 +79,9 @@ c
 repl
 
 ```
+
+#### Pretty print objects in the console
+
+```javascript
+JSON.stringify(body, undefined, 2)
+```

@@ -12,6 +12,7 @@ const bodyOptions = {
   demand: true,
   alias: 'b'
 };
+
 const notes = require('./notes.js');
 const argv = yargs
   .command('add', 'Add a new note', {

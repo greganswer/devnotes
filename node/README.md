@@ -25,3 +25,22 @@ touch app.js
 # Then run `npm install`
 npm install --save express ejs body-parser
 ```
+
+#### Send data from one file to another
+
+```javascript
+// In notes.js
+module.exports.age = 25;
+
+// In app.js
+const notes = require('./notes.js');
+const user = os.userInfo();
+
+fs.appendFileSync('greetings.txt', `Hello ${user.username}! You are ${notes.age} `);
+```
+
+#### Get arguments from command license
+
+```javascript
+process.argv
+```

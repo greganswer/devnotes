@@ -1,18 +1,26 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static("public"))
 app.set("view engine", "ejs")
+
+let friends = ["Tony", "John", "Mary"];
 
 app.get("/", (req, res) => {
   res.render("home");
 });
 
 app.get("/friends", (req, res) => {
-  let friends = ["Tony", "John", "Mary"];
-  res.render("friends", {
-    friends: friends
-  });
+  res.render("friends", { friends: friends });
+});
+
+app.post("/addFriend", (req, res) => {
+  let name = req.body.name;
+  friends.push(name);
+  res.redirect("friends")
 });
 
 app.get("/r/:subReddit", (req, res) => {

@@ -90,10 +90,43 @@ repl
 JSON.stringify(body, undefined, 2)
 ```
 
-####
+#### app.use() statements
 
 `app.use()` statements are run in chronological
 
 ```javascript
-app.use((req, res, next)
+app.use((req, res, next))
+```
+
+#### Run tests
+
+```bash
+npm test
+nodemon --exec npm test # Autorun tests
+```
+
+OR
+
+```javascript
+// package.json
+
+"scripts": {
+  "test": "mocha **/*.test.js",
+  "test-watch": "nodemon --exec \"npm test\""
+},
+```
+
+```bash
+npm run test-watch # Autorun tests
+```
+
+#### Asynchronous testing
+
+```javascript
+it('should async add two numbers', done => {
+  utils.asyncAdd(3, 4, sum => {
+    expect(sum).toBe(7).toBeA('number');
+    done();
+  });
+});
 ```

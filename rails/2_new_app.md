@@ -27,6 +27,31 @@ cd APPNAME
 rake db:create
 ```
 
+### Different version setup
+
+```
+# make directory for new rails app
+mkdir app
+cd app
+
+# install the correct Ruby version
+rbenv install 2.3.1
+rbenv local 2.3.1
+ruby -v
+
+# specify ruby version 
+echo 2.3.1 > .ruby-version
+
+# initialize bundler (creates Gemfile)
+bundler init
+
+# specify rails version in Gemfile
+gem "rails", "4.2.5"
+
+# create rails app using specified version
+bundle exec rails new . 
+```
+
 If you received an error that said `Access denied for user 'root'@'localhost' (using password: NO)` then you need to update your config/database.yml file to match the database username and password.
 
 ## Setup Capistrano

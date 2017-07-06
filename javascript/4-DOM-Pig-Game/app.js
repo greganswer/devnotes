@@ -10,8 +10,9 @@ GAME RULES:
 */
 
 let scores, roundScore, activePlayer, gameOver;
-let winningScore = 20;
+const DEFAULT_FINAL_SCORE = 100;
 
+finalScore();
 initGame();
 
 // -----------------------
@@ -26,7 +27,7 @@ getDomClass('btn-roll').addEventListener('click', function() {
   if (dice !== 1) {
     roundScore += dice;
     getDomId(`current-${activePlayer}`).textContent = roundScore;
-    if (roundScore + scores[activePlayer] >= winningScore) {
+    if (roundScore + scores[activePlayer] >= finalScore()) {
       declareWinner();
     }
   } else {
@@ -59,11 +60,18 @@ function initGame() {
   getDomId(`current-${activePlayer || 0}`).textContent = 0;
   getDomId('score-0').textContent = 0;
   getDomId('score-1').textContent = 0;
+  finalScore();
 
   scores = [0, 0];
   roundScore = 0;
   activePlayer = 0;
   gameOver = false;
+}
+
+function finalScore() {
+  let finalScore = getDomClass('final-score').value;
+  finalScore = finalScore >= 1 ? finalScore : DEFAULT_FINAL_SCORE;
+  return (getDomClass('final-score').value = finalScore);
 }
 
 function rollDice() {
@@ -96,6 +104,7 @@ function switchPlayers() {
   getDomClass('dice').style.display = 'none';
   activePlayer = activePlayer === 0 ? 1 : 0;
   roundScore = 0;
+  finalScore();
 }
 
 function declareWinner() {

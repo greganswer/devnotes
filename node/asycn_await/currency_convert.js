@@ -1,5 +1,11 @@
 const axios = require('axios');
 
+/**
+ * Get the exchange rate between 2 currencies
+ * @param  {String} from The currency being exchanged
+ * @param  {String} to The final currency
+ * @return {Promise} The exchange rate
+ */
 const getExchangeRate = async (from, to) => {
   from = from.toUpperCase();
   to = to.toUpperCase();
@@ -18,6 +24,11 @@ const getExchangeRate = async (from, to) => {
   }
 };
 
+/**
+ * Get the list of countries that except a currency
+ * @param  {String} currencyCode The currency code
+ * @return {Promise} An array of countries that except a currency
+ */
 const getCountries = async currencyCode => {
   currencyCode = currencyCode.toLowerCase();
 
@@ -31,6 +42,13 @@ const getCountries = async currencyCode => {
   }
 };
 
+/**
+ * Convert the currency and get the list of countries that except the currency
+ * @param  {String} from The currency being exchanged
+ * @param  {String} to The final currency
+ * @param  {Number} amount The amount to be exchanged
+ * @return {Promise} A string
+ */
 const convertCurrency = async (from, to, amount) => {
   const countries = await getCountries(to);
   const rate = await getExchangeRate(from, to);

@@ -1,16 +1,18 @@
 const axios = require('axios');
 
-const getExchangeRate = (from, to) => {
-  let url = `https://api.fixer.io/latest?base=${from}`;
+const getExchangeRate = async (from, to) => {
+  from = from.toUpperCase();
   to = to.toUpperCase();
-  return axios.get(url).then(response => response.data.rates[to]);
+  const response = await axios.get(`https://api.fixer.io/latest?base=${from}`);
+  return response.data.rates[to];
 };
 
-const getCountries = currencyCode => {
-  let url = `https://restcountries.eu/rest/v2/currency/${currencyCode}`;
-  return axios
-    .get(url)
-    .then(response => response.data.map(country => country.name));
+const getCountries = async currencyCode => {
+  currencyCode = currencyCode.toLowerCase();
+  const response = await axios.get(
+    `https://restcountries.eu/rest/v2/currency/${currencyCode}`,
+  );
+  return response.data.map(country => country.name);
 };
 
 const convertCurrency = async (from, to, amount) => {
@@ -23,4 +25,6 @@ const convertCurrency = async (from, to, amount) => {
   )}`;
 };
 
-convertCurrency('cad', 'usd', 40).then(output => console.log(output));
+convertCurrency('cad', 'usd', 40)
+  .then(output => console.log(output))
+  .catch(e => console.log(e));

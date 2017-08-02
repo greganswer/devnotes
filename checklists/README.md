@@ -16,10 +16,11 @@ I believe that everything in this section **must** be completed, unless you have
 1. [Error pages](error_pages)
 1. Contact info
     1. Support email address with [Autoresponse](https://status-page-blog.herokuapp.com/customer-service-email)
+1. Responsive design
 1. Final checks
     1. Functioning links
     1. Functioning forms
-    1. Viewable media (images, video, etc.) 
+    1. Viewable media (images, video, etc.)
     1. Spelling and grammar
     1. Do emails get sent to the correct recipients?
     1. Does the site work on agree upon platforms (Devices, Operating systems, Browsers)?

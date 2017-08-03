@@ -13,7 +13,6 @@ I believe that everything in this section **must** be completed, unless you have
     1. Copyright info in the page footer
     1. Terms of Services
     1. Privacy Policy
-1. [Error pages](error_pages)
 1. Contact info
     1. Support email address with [Autoresponse](https://status-page-blog.herokuapp.com/customer-service-email)
 1. Responsive design
@@ -28,6 +27,8 @@ I believe that everything in this section **must** be completed, unless you have
 
 ## Error handling and security
 
+1. Enable SSL
+1. Database backups
 1. [Rollbar](https://rollbar.com/) error notifications
 
 ## Marketing and SEO
@@ -42,4 +43,5 @@ I believe that everything in this section **must** be completed, unless you have
 The folowing are optional yet beneficial features:
 
 1. Feedback form
+1. [Error pages](error_pages)
 1. Favicon

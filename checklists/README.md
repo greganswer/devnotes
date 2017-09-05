@@ -37,11 +37,17 @@ I believe that everything in this section **must** be completed, unless you have
 1. Sitemap
     1. XML
     1. HTML
+1. Add whitelabels with your transactional email provider
+    1.  For your domain
+    1.  For your links in the email
+    1.  For your IP
+1. Facebook sharing https://developers.facebook.com/tools/debug/sharing/ 
 
 ## Better UX
 
 The folowing are optional yet beneficial features:
 
+1. Responsive design
 1. Feedback form
 1. [Error pages](error_pages)
 1. Favicon
